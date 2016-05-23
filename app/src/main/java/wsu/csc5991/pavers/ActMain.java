@@ -75,7 +75,7 @@ public class ActMain extends AppCompatActivity {
     }
 
     //==============================================================
-    // method: calculateCost
+    // method: calculateCost -- called when button is clicked
     /**
      * Calculate the cost of labor and materials based on hours and the size of the
      * driveway and sidewalks. Check if all input fields are entered. If any input values are
