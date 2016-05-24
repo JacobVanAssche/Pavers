@@ -15,17 +15,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:text="Driveway Square Meters: "
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etDrivewaySize"
@@ -38,17 +38,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:text="Sidewalk Square Meters: "
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etSidewalkSize"
@@ -61,17 +61,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:text="Hours to complete: "
-            android:textStyle="bold"
             android:textSize="20sp"
-            android:gravity="center"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etHoursToComplete"
@@ -88,36 +88,85 @@
         android:background="@android:color/holo_blue_dark"
         android:onClick="calculateCost"
         android:text="Calculate Cost"
-        android:textStyle="bold"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tvLaborCost"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center_horizontal"
-        android:text="Labor Cost: "
-        android:textStyle="bold"
-        android:textSize="23sp" />
-
-    <TextView
-        android:id="@+id/tvAsphaltCost"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:gravity="center_horizontal"
-        android:text="Cost for Asphalt: "
-        android:textStyle="bold"
-        android:textSize="23sp" />
-
-    <TextView
-        android:id="@+id/tvConcreteCost"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Cost for Concrete: "
-        android:textStyle="bold"
-        android:textSize="23sp" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:text="Labor Cost: $"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLaborCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            tools:text="50.00" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:text="Cost for Asphalt: $"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAsphaltCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            tools:text="100.00" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Cost for Concrete: $"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvConcreteCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            tools:text="60.00" />
+    </LinearLayout>
 
 </LinearLayout>

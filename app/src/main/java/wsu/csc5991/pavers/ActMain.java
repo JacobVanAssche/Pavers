@@ -43,11 +43,6 @@ public class ActMain extends AppCompatActivity {
     private double asphaltCostPerSqYard = 25;
     private double concreteCostPerSqYard = 75;
 
-    // Strings to use for displaying to the user
-    private String laborCostMessage = "Labor cost: $";
-    private String asphaltCostMessage = "Cost for Asphalt: $";
-    private String concreteCostMessage = "Cost for Concrete: $";
-
     // A toast message to display input validation.
     private Toast toast;
 
@@ -83,16 +78,15 @@ public class ActMain extends AppCompatActivity {
      */
     //==============================================================
     public void calculateCost(View view) {
-        // Throwaway string to use for displaying messages to the user.
-        String message;
-
         // Retrieve the String values of the input
         String hoursToCompleteIn = etHoursToComplete.getText().toString();
         String drivewaySizeIn = etDrivewaySize.getText().toString();
         String sidewalkSizeIn = etSidewalkSize.getText().toString();
 
         // Verify that all the inputs are set, if they aren't then tell the user via toast
-        if (hoursToCompleteIn.equals("") || drivewaySizeIn.equals("") || sidewalkSizeIn.equals("")) {
+        if (hoursToCompleteIn.equals("") ||
+                drivewaySizeIn.equals("") ||
+                sidewalkSizeIn.equals("")) {
             throwToast();
         }
         // If all the inputs are set, then calculate the costs
@@ -100,8 +94,7 @@ public class ActMain extends AppCompatActivity {
             // Calculate Labor Cost
             double hoursToComplete = Double.parseDouble(etHoursToComplete.getText().toString());
             double totalLaborCost = hoursToComplete * laborCostPerHour;
-            message = laborCostMessage + String.valueOf(totalLaborCost);
-            tvLaborCost.setText(message);
+            tvLaborCost.setText(String.valueOf(totalLaborCost));
 
             // Calculate Total Size (in Sq. Yards)
             double drivewaySize = Double.parseDouble(etDrivewaySize.getText().toString());
@@ -110,13 +103,11 @@ public class ActMain extends AppCompatActivity {
 
             // Calculate Asphalt Cost
             double asphaltCost = totalSqYards * asphaltCostPerSqYard;
-            message = asphaltCostMessage + String.valueOf(asphaltCost);
-            tvAsphaltCost.setText(message);
+            tvAsphaltCost.setText(String.valueOf(asphaltCost));
 
             // Calculate Concrete Cost
             double concreteCost = totalSqYards * concreteCostPerSqYard;
-            message = concreteCostMessage + String.valueOf(concreteCost);
-            tvConcreteCost.setText(message);
+            tvConcreteCost.setText(String.valueOf(concreteCost));
         }
     }
 
